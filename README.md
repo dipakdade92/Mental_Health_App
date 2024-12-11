@@ -35,7 +35,7 @@ bash
 
     Backend:
         Navigate to the server directory.
-         Run the following commands:
+        Run the following commands:
 
   
 bash
@@ -43,8 +43,41 @@ bash
   $ npm install
 
   $npm start
- 
 
+       Database Setup
+           To set up the database for the mental health app, follow these steps:
+               1: Create the Database:
+                  CREATE DATABASE mental_health_app;
+                  
+               2:Select the Database:
+                 USE mental_health_app;
+               3: Create the Users Table:
+               CREATE TABLE Users (
+                         id INT AUTO_INCREMENT PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        email VARCHAR(255) UNIQUE NOT NULL,
+                        password VARCHAR(255) NOT NULL,
+                        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                        );
+                4:  Create the Logs Table:
+                    CREATE TABLE Logs (
+                            id INT AUTO_INCREMENT PRIMARY KEY,
+                            userId INT,
+                            moodRating INT,
+                            anxietyLevel INT,
+                            sleepHours INT,
+                            sleepQuality VARCHAR(50),
+                            physicalActivity VARCHAR(255),
+                            socialInteraction VARCHAR(255),
+                            stressLevel INT,
+                            depressionSymptoms VARCHAR(255),
+                            createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                            updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                            FOREIGN KEY (userId) REFERENCES Users(id)
+                        );
+
+ 
 * Technology Stack *
   
        Frontend:
