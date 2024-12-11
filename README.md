@@ -24,7 +24,7 @@ This project includes two main parts:
 Installation and Setup
 
     Frontend:
-        Navigate to the frontend directory.
+        Navigate to the client directory.
         Run the following commands:
 
 bash
@@ -33,23 +33,29 @@ bash
 
   $ npm run dev
 
-  Backend
-  Navigate to the backend directory.
-  Run the following commands:
+    Backend:
+        Navigate to the server directory.
+         Run the following commands:
+
   
+bash
+
   $ npm install
-  $ npm start
+
+  $npm start
+ 
 
 * Technology Stack *
-     
-     Frontend:
+  
+       Frontend:
         React: UI components
         Axios: For API calls
+  
+        Backend:
+           Node.js: Server-side logic
+           Express: API framework
+           MySql: Database for storing user data and mood tracking
 
-    Backend:
-        Node.js: Server-side logic
-        Express: API framework
-        MySql: Database for storing user data and mood tracking
 
 
 
