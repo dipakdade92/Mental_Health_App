@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import DataVisualization from "../components/DataVisualization";
 const Dashboard = () => {
   const user = JSON.parse(localStorage.getItem('token'));
-  console.log(user); 
   
   return (
     <>

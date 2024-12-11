@@ -26,7 +26,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api', logRoutes);
 
 io.on('connection', (socket) => {
-  console.log('A user connected');
 
   socket.emit('message', { message: 'Welcome to the WebSocket server!' });
 
@@ -42,7 +41,6 @@ io.on('connection', (socket) => {
 
 db.sync()
   .then(() => {
-    console.log('Database synced successfully');
     server.listen(5000, () => {
       console.log('Server is running on port 5000');
     });

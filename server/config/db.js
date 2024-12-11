@@ -4,7 +4,7 @@ const sequelize = new Sequelize({
   dialect: 'mysql',
   host: 'localhost',
   username: 'root',
-  password: 'root',
+  password: 'root', // write your database password
   database: 'mental_health_app',
 });
 

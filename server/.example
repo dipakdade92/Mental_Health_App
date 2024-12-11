@@ -1,6 +1,6 @@
 DB_HOST=localhost
 DB_USER=root
-DB_PASS=root
+DB_PASS=root  #write your database password
 DB_NAME=mental_health_app
 PORT=5000
 JWT_SECRET_KEY=healthappkey8877

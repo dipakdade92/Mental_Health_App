@@ -16,7 +16,6 @@ const DailyLogForm = () => {
   const token = JSON.parse(localStorage.getItem("token"));
 
   const userId = token ? token.id : null;
-  console.log(userId);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -49,7 +48,6 @@ const DailyLogForm = () => {
     try {
       // Make the POST request to save the log data
       const response = await axios.post("http://localhost:5000/api/log", logData);
-      console.log("Data submitted successfully: ", response.data);
       alert("Your log has been submitted!");
       setFormData({
         mood: "",

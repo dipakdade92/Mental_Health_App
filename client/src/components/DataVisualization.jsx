@@ -30,7 +30,6 @@ const DataVisualization = () => {
   const token = JSON.parse(localStorage.getItem("token"));
 
   const userId = token ? token.id : null;
-  console.log(userId);
 
   // Fetch initial logs from API
   useEffect(() => {
@@ -61,12 +60,8 @@ const DataVisualization = () => {
 
   // Handle real-time updates
   useEffect(() => {
-    socket.on("connect", () => {
-      console.log("Connected to WebSocket server");
-    });
 
     socket.on("message", (newLog) => {
-      console.log("New log received:", newLog);
       setData((prevData) => ({
         dates: [...prevData.dates, new Date(newLog.updatedAt).toLocaleDateString()],
         mood: [...prevData.mood, newLog.moodRating],
